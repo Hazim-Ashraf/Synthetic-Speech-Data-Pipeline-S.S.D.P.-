@@ -140,9 +140,16 @@ def run_auto_scoring(config):
 
     scores_path = od / "manifests/stage3_scores.json"
     prog_path = od / "manifests/stage3_scores_progress.json"
+    stage2_path = od / "manifests/stage2_manifest.json"
 
     progress = load_checkpoint(str(prog_path))
     if not isinstance(progress, dict): progress = {}
+    
+    # Force fresh run if Stage 2 manifest is newer than Stage 3 progress
+    if stage2_path.exists() and prog_path.exists():
+        if stage2_path.stat().st_mtime > prog_path.stat().st_mtime:
+            print("Stage 2 manifest is newer than Stage 3 progress. Forcing fresh scoring run.")
+            progress = {}
     pending = [m for m in manifest if m["id"] not in progress]
     print(f"[Scoring] {len(progress)} done, {len(pending)} remaining.")
 
@@ -230,6 +237,18 @@ def run_streamlit_app():
         st.markdown("---")
         st.progress((ap+rj)/len(data) if data else 0)
         st.caption(f"{ap+rj}/{len(data)} reviewed")
+
+        st.markdown("---")
+        st.markdown("### Finish Review")
+        approve_unreviewed = st.checkbox("Approve all unreviewed samples (Export as they are)")
+        if st.button("Proceed to Stage 4 ➡️", type="primary", use_container_width=True):
+            if approve_unreviewed:
+                for x in data:
+                    if x.get("final_label") is None:
+                        x["final_label"] = "approved"
+                _save_json(data, sp)
+            import os
+            os._exit(0)
 
     if not filtered:
         st.info("No samples match filter.")

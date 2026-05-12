@@ -33,20 +33,25 @@ Rules:
 - Pure Egyptian dialect. NO Modern Standard Arabic (فصحى).
 - Use authentic Egyptian vocabulary: عايز، مش، دلوقتي، إيه، بتاع، ازيك، يلا، معلش
 - Vary sentence length: short (3-5 words), medium (6-10 words), long (11-15 words)
-- Cover these domains evenly: daily greetings, shopping, family, street directions, \
-phone calls, food ordering, complaints, expressions of surprise/emotion, work talk
+- Ensure EXACTLY even coverage of these 6 domains to prevent repetition (approx. 8-9 samples per domain):
+  1. Sales / Shopping (e.g., "القميص ده عليه خصم حلو أوي")
+  2. Customer Service (e.g., "يا فندم أقدر أساعد حضرتك إزاي؟")
+  3. Teacher talking to students (e.g., "يا ولاد ركزوا معايا في الدرس ده")
+  4. Daily greetings / casual talk (e.g., "صباح الفل يا باشا عامل إيه؟")
+  5. Food ordering / delivery (e.g., "الأوردر اتأخر جدا يا جماعة")
+  6. General / Miscellaneous (street directions, family, etc.)
 - Output ONLY a JSON array of strings. No explanation. No numbering.
-  Example: ["عايز أروح السوق دلوقتي", "إيه اللي بيحصل ده؟"]"""
+  Example: ["يا فندم رقم الطلب كام؟", "افتحوا الكتاب صفحة عشرة"]"""
 
 # ── Domain keywords for classification ────────
 DOMAIN_KEYWORDS: Dict[str, List[str]] = {
     "daily_greetings": [
         "صباح", "مساء", "ازيك", "أخبارك", "سلام", "عامل", "تصبح",
-        "مع السلامه", "أهلا", "يا باشا", "الحمد لله",
+        "مع السلامه", "أهلا", "يا باشا", "الحمد لله", "يا معلم",
     ],
     "shopping": [
         "سوق", "اشتري", "فلوس", "سعر", "بكام", "غالي", "رخيص",
-        "محل", "تمن", "حساب", "خصم",
+        "محل", "تمن", "حساب", "خصم", "عروض", "منتج", "تخفيض", "مقاس", "ألوان"
     ],
     "family": [
         "ماما", "بابا", "أخو", "أخت", "عيلة", "بيت", "ولاد",
@@ -54,7 +59,7 @@ DOMAIN_KEYWORDS: Dict[str, List[str]] = {
     ],
     "street_directions": [
         "شارع", "يمين", "شمال", "دوغري", "ناصيه", "محطه", "روح",
-        "فين", "طريق", "ميدان", "كوبري",
+        "فين", "طريق", "ميدان", "كوبري","مواصلات",
     ],
     "phone_calls": [
         "تليفون", "كلم", "اتصل", "رن", "رسال", "موبايل", "خط",
@@ -75,6 +80,14 @@ DOMAIN_KEYWORDS: Dict[str, List[str]] = {
     "work_talk": [
         "شغل", "مدير", "مرتب", "اجتماع", "مكتب", "مشروع",
         "اجازه", "زميل", "شركه", "ترقيه",
+    ],
+    "customer_service": [
+        "يا فندم", "خدمة", "عملاء", "أساعد", "حضرتك", "مشكلة",
+        "رقم", "طلب", "نعتذر", "تأكيد", "شكوى", "حسابك", "نحلها"
+    ],
+    "teacher_students": [
+        "يا ولاد", "درس", "امتحان", "واجب", "كتاب", "كراسة", "فهمتوا",
+        "سؤال", "جواب", "سبورة", "مدرسة", "فصل", "ركزوا", "صفحة", "أستاذ"
     ],
 }
 

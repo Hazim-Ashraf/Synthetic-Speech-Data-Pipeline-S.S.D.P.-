@@ -24,10 +24,10 @@ A production-grade pipeline for generating synthetic speech training data target
 
 ## Model Choices & Rationale
 
-### Text Generation: MBZUAI-Paris/Nile-Chat-4B
+### Text Generation: Nile-Chat-4B (4-bit Quantized GGUF)
 - **Why**: A 4B-parameter model from the JAIS initiative, based on Gemma 3 and fine-tuned specifically for Egyptian Arabic (عامية مصرية). Unlike general-purpose LLMs that treat Egyptian dialect as a secondary capability, Nile-Chat was continually pre-trained on 3.3B tokens of Egyptian web text and instruction-tuned on 1.9M Egyptian Arabic instructions. It natively understands the dialect's vocabulary, grammar, and orthographic conventions.
-- **Trade-off**: Being a 4B model, it requires ~8GB RAM (bfloat16) and runs locally rather than via API. Generation is slower than a cloud API but eliminates API costs and external dependencies. The model runs on CPU, CUDA, or MPS (Apple Silicon).
-- **Why not GPT-4o**: Nile-Chat-4B is purpose-built for Egyptian Arabic, whereas GPT-4o treats it as one of many languages. Nile-Chat produces more authentic dialectal text with fewer MSA contamination artifacts. It also runs fully offline — no API key or internet required during generation.
+- **Trade-off**: We use the **4-bit quantized GGUF version (Q4_K_M)** via `llama-cpp-python`. This shrinks the RAM requirement from ~8GB (bfloat16) down to just ~3GB, making it extremely lightweight and fast for local generation on Mac M1 (MPS) or standard CPUs. Generation is offline — no API key or internet required.
+- **Why not GPT-4o**: Nile-Chat-4B is purpose-built for Egyptian Arabic, whereas GPT-4o treats it as one of many languages. Nile-Chat produces more authentic dialectal text with fewer MSA contamination artifacts.
 
 ### TTS: NAMAA-Space/NAMAA-Egyptian-TTS (via chatterbox)
 - **Why**: One of the very few TTS models specifically trained on Egyptian Arabic dialect. Most Arabic TTS models target Modern Standard Arabic (فصحى), which sounds fundamentally different from Egyptian colloquial speech. NAMAA's model captures Egyptian phonology, intonation, and vocabulary.

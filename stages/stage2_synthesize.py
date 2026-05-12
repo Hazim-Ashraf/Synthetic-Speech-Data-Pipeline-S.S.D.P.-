@@ -148,9 +148,27 @@ def run(config: Dict[str, Any]) -> None:
 
     # ── Load progress checkpoint ──────────────────
     progress = load_checkpoint(str(progress_path))
-    if not isinstance(progress, dict):
-        progress = {}
-    # progress = {"0001": {"status": "done", "duration": 3.2}, ...}
+    
+    # Check if Stage 1 prompts are newer than our Stage 2 progress.
+    # If so, we need a completely fresh run to avoid mixing old data.
+    is_fresh_run = False
+    if not isinstance(progress, dict) or not progress:
+        is_fresh_run = True
+    elif prompts_path.exists() and progress_path.exists():
+        if prompts_path.stat().st_mtime > progress_path.stat().st_mtime:
+            log.info("Stage 1 prompts are newer than Stage 2 progress. Forcing a fresh run.")
+            progress = {}
+            is_fresh_run = True
+
+    if is_fresh_run:
+        # If progress is empty or forced fresh, clean the audio directory
+        # so old files don't mix with the new ones.
+        log.info("Fresh run detected. Cleaning old audio files...")
+        for old_file in audio_dir.glob(f"*.{audio_format}"):
+            try:
+                old_file.unlink()
+            except Exception as e:
+                log.warning(f"Could not delete old file {old_file}: {e}")
 
     done_ids = {pid for pid, info in progress.items() if info.get("status") == "done"}
     pending = [p for p in prompts_data if p["id"] not in done_ids]

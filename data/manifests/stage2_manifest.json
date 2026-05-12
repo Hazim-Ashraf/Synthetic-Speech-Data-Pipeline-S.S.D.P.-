@@ -1,0 +1,352 @@
+[
+  {
+    "id": "0001",
+    "text": "يا باشا إيه الأخبار؟",
+    "audio_path": "data/audio/0001.wav",
+    "duration_sec": 1.24,
+    "status": "done"
+  },
+  {
+    "id": "0002",
+    "text": "يا ولاد ركزوا في الدرس",
+    "audio_path": "data/audio/0002.wav",
+    "duration_sec": 1.6,
+    "status": "done"
+  },
+  {
+    "id": "0003",
+    "text": "يا باشا أقدر أساعد حضرتك إزاي؟",
+    "audio_path": "data/audio/0003.wav",
+    "duration_sec": 1.76,
+    "status": "done"
+  },
+  {
+    "id": "0004",
+    "text": "يا باشا عايز حاجة من اللي هناك",
+    "audio_path": "data/audio/0004.wav",
+    "duration_sec": 1.72,
+    "status": "done"
+  },
+  {
+    "id": "0005",
+    "text": "الأوردر لسه ماجاش",
+    "audio_path": "data/audio/0005.wav",
+    "duration_sec": 1.52,
+    "status": "done"
+  },
+  {
+    "id": "0006",
+    "text": "معلش يا عم احنا مش موجودين النهاردة",
+    "audio_path": "data/audio/0006.wav",
+    "duration_sec": 2.84,
+    "status": "done"
+  },
+  {
+    "id": "0007",
+    "text": "ممكن توضحلي الطريق لبيتهم?",
+    "audio_path": "data/audio/0007.wav",
+    "duration_sec": 2.16,
+    "status": "done"
+  },
+  {
+    "id": "0008",
+    "text": "إيه يا ولاد عملتوا إيه في المذاكرة؟",
+    "audio_path": "data/audio/0008.wav",
+    "duration_sec": 1.68,
+    "status": "done"
+  },
+  {
+    "id": "0009",
+    "text": "أهلاً، يا معلم، إزيك؟",
+    "audio_path": "data/audio/0009.wav",
+    "duration_sec": 1.8,
+    "status": "done"
+  },
+  {
+    "id": "0010",
+    "text": "أهو ده البقالة بتاعتك، يا باشا.",
+    "audio_path": "data/audio/0010.wav",
+    "duration_sec": 1.88,
+    "status": "done"
+  },
+  {
+    "id": "0011",
+    "text": "يا جماعة، الأوردر ده راح في داهية، ماشي؟",
+    "audio_path": "data/audio/0011.wav",
+    "duration_sec": 3.08,
+    "status": "done"
+  },
+  {
+    "id": "0012",
+    "text": "يا صاحبي، إيه أخبارك؟",
+    "audio_path": "data/audio/0012.wav",
+    "duration_sec": 1.52,
+    "status": "done"
+  },
+  {
+    "id": "0013",
+    "text": "بص يا معلم، مش عارف أصلح العجلة دي، أعمل إيه؟",
+    "audio_path": "data/audio/0013.wav",
+    "duration_sec": 2.48,
+    "status": "done"
+  },
+  {
+    "id": "0014",
+    "text": "القميص ده عليه خصم حلو أوي",
+    "audio_path": "data/audio/0014.wav",
+    "duration_sec": 2.68,
+    "status": "done"
+  },
+  {
+    "id": "0015",
+    "text": "يا فندم أقدر أساعد حضرتك إزاي؟",
+    "audio_path": "data/audio/0015.wav",
+    "duration_sec": 2.2,
+    "status": "done"
+  },
+  {
+    "id": "0016",
+    "text": "يا ولاد ركزوا معايا في الدرس ده",
+    "audio_path": "data/audio/0016.wav",
+    "duration_sec": 2.28,
+    "status": "done"
+  },
+  {
+    "id": "0017",
+    "text": "يا جماعة الأوردر اتأخر جدا",
+    "audio_path": "data/audio/0017.wav",
+    "duration_sec": 2.56,
+    "status": "done"
+  },
+  {
+    "id": "0018",
+    "text": "صباح الفل يا باشا عامل إيه؟",
+    "audio_path": "data/audio/0018.wav",
+    "duration_sec": 2.48,
+    "status": "done"
+  },
+  {
+    "id": "0019",
+    "text": "الأوردر اتأخر جدا يا جماعة",
+    "audio_path": "data/audio/0019.wav",
+    "duration_sec": 2.64,
+    "status": "done"
+  },
+  {
+    "id": "0020",
+    "text": "ازيك يا باشا عامل إيه؟",
+    "audio_path": "data/audio/0020.wav",
+    "duration_sec": 1.36,
+    "status": "done"
+  },
+  {
+    "id": "0021",
+    "text": "الموضوع ده مش على ميزانيتي خالص",
+    "audio_path": "data/audio/0021.wav",
+    "duration_sec": 2.56,
+    "status": "done"
+  },
+  {
+    "id": "0022",
+    "text": "عايزك تعرف يا باشا إنك مش هتعرف تخلص الشغل ده",
+    "audio_path": "data/audio/0022.wav",
+    "duration_sec": 2.72,
+    "status": "done"
+  },
+  {
+    "id": "0023",
+    "text": "معلش يا حبيبي أنا مش فاضي أقولك على خططك",
+    "audio_path": "data/audio/0023.wav",
+    "duration_sec": 2.28,
+    "status": "done"
+  },
+  {
+    "id": "0024",
+    "text": "القميص ده عليه خصم جامد أوي",
+    "audio_path": "data/audio/0024.wav",
+    "duration_sec": 1.64,
+    "status": "done"
+  },
+  {
+    "id": "0025",
+    "text": "مش عارف انتي بتعملي ايه بس انا مش عاجبني خالص",
+    "audio_path": "data/audio/0025.wav",
+    "duration_sec": 2.8,
+    "status": "done"
+  },
+  {
+    "id": "0026",
+    "text": "بص يا معلم احنا محتاجين نقفل السكة دي دلوقتي",
+    "audio_path": "data/audio/0026.wav",
+    "duration_sec": 3.08,
+    "status": "done"
+  },
+  {
+    "id": "0027",
+    "text": "ازيك عامل ايه يالا مشوار حلو اوي",
+    "audio_path": "data/audio/0027.wav",
+    "duration_sec": 2.36,
+    "status": "done"
+  },
+  {
+    "id": "0028",
+    "text": "معلش يا معلم مينفعش تفضفض كده في الشارع",
+    "audio_path": "data/audio/0028.wav",
+    "duration_sec": 2.44,
+    "status": "done"
+  },
+  {
+    "id": "0029",
+    "text": "انا مش فاهم انت بتقول ايه بس مش مشكلة",
+    "audio_path": "data/audio/0029.wav",
+    "duration_sec": 2.24,
+    "status": "done"
+  },
+  {
+    "id": "0030",
+    "text": "صباح الخير يا باشا عامل ايه؟",
+    "audio_path": "data/audio/0030.wav",
+    "duration_sec": 2.28,
+    "status": "done"
+  },
+  {
+    "id": "0031",
+    "text": "القميص ده عليه خصم حلو اوي",
+    "audio_path": "data/audio/0031.wav",
+    "duration_sec": 2.08,
+    "status": "done"
+  },
+  {
+    "id": "0032",
+    "text": "يا فندم عايز تشتري ايه؟",
+    "audio_path": "data/audio/0032.wav",
+    "duration_sec": 1.68,
+    "status": "done"
+  },
+  {
+    "id": "0033",
+    "text": "يا جماعة الاوردر اتاخر جدا",
+    "audio_path": "data/audio/0033.wav",
+    "duration_sec": 2.52,
+    "status": "done"
+  },
+  {
+    "id": "0034",
+    "text": "يا باشا من فضلك ممكن توقف العربية عشان اجيب حاجة؟",
+    "audio_path": "data/audio/0034.wav",
+    "duration_sec": 3.28,
+    "status": "done"
+  },
+  {
+    "id": "0035",
+    "text": "يا جماعة فين تليفون العامية؟",
+    "audio_path": "data/audio/0035.wav",
+    "duration_sec": 2.76,
+    "status": "done"
+  },
+  {
+    "id": "0036",
+    "text": "يا دكتور يا ريت تحلليلي المشكلة دي؟",
+    "audio_path": "data/audio/0036.wav",
+    "duration_sec": 2.68,
+    "status": "done"
+  },
+  {
+    "id": "0037",
+    "text": "يا ريت تقولي إيه الجديد في الشغل؟",
+    "audio_path": "data/audio/0037.wav",
+    "duration_sec": 2.32,
+    "status": "done"
+  },
+  {
+    "id": "0038",
+    "text": "يا جماعة أوبس الأوردر ضاع خالص",
+    "audio_path": "data/audio/0038.wav",
+    "duration_sec": 2.4,
+    "status": "done"
+  },
+  {
+    "id": "0039",
+    "text": "بصي أنا مش فاهمة حاجة خالص",
+    "audio_path": "data/audio/0039.wav",
+    "duration_sec": 1.56,
+    "status": "done"
+  },
+  {
+    "id": "0040",
+    "text": "المكان ده بعيد أوي عن بيتي",
+    "audio_path": "data/audio/0040.wav",
+    "duration_sec": 1.68,
+    "status": "done"
+  },
+  {
+    "id": "0041",
+    "text": "الجمعة دي هشتغل على طول",
+    "audio_path": "data/audio/0041.wav",
+    "duration_sec": 2.28,
+    "status": "done"
+  },
+  {
+    "id": "0042",
+    "text": "يا نهار أبيض يا باشا إنت عامل إيه؟",
+    "audio_path": "data/audio/0042.wav",
+    "duration_sec": 2.64,
+    "status": "done"
+  },
+  {
+    "id": "0043",
+    "text": "ده يوم السبت هروح أشتري",
+    "audio_path": "data/audio/0043.wav",
+    "duration_sec": 2.52,
+    "status": "done"
+  },
+  {
+    "id": "0044",
+    "text": "أهلاً، أزيك يا عم؟ عامل إيه؟",
+    "audio_path": "data/audio/0044.wav",
+    "duration_sec": 2.16,
+    "status": "done"
+  },
+  {
+    "id": "0045",
+    "text": "يلا يا عم، عايزين نخلص من الموضوع ده!",
+    "audio_path": "data/audio/0045.wav",
+    "duration_sec": 2.68,
+    "status": "done"
+  },
+  {
+    "id": "0046",
+    "text": "يا باشا، أيوة أنا شفتك!",
+    "audio_path": "data/audio/0046.wav",
+    "duration_sec": 1.76,
+    "status": "done"
+  },
+  {
+    "id": "0047",
+    "text": "إيه رأيك في القميص ده يا عم؟",
+    "audio_path": "data/audio/0047.wav",
+    "duration_sec": 1.52,
+    "status": "done"
+  },
+  {
+    "id": "0048",
+    "text": "يا باشا أقدر أساعدك إزاي؟",
+    "audio_path": "data/audio/0048.wav",
+    "duration_sec": 1.92,
+    "status": "done"
+  },
+  {
+    "id": "0049",
+    "text": "أهلاً، إيه الأخبار؟",
+    "audio_path": "data/audio/0049.wav",
+    "duration_sec": 1.08,
+    "status": "done"
+  },
+  {
+    "id": "0050",
+    "text": "يا باشا تعالى نروح ناكل مع بعض",
+    "audio_path": "data/audio/0050.wav",
+    "duration_sec": 1.96,
+    "status": "done"
+  }
+]

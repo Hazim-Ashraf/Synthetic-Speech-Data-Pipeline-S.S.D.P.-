@@ -216,12 +216,15 @@ def _run_stage3(config: dict) -> None:
     run_auto_scoring(config)
 
     # Phase B: launch Streamlit UI
-    log.info("Launching Streamlit review app...")
+    log.info("Launching Streamlit review app... (Press Ctrl+C in terminal when done reviewing)")
     streamlit_path = PROJECT_ROOT / "stages" / "stage3_review.py"
-    subprocess.run(
-        [sys.executable, "-m", "streamlit", "run", str(streamlit_path)],
-        cwd=str(PROJECT_ROOT),
-    )
+    try:
+        subprocess.run(
+            [sys.executable, "-m", "streamlit", "run", str(streamlit_path)],
+            cwd=str(PROJECT_ROOT),
+        )
+    except KeyboardInterrupt:
+        log.info("Streamlit review app closed by user. Proceeding...")
 
 
 def _run_stage4(config: dict) -> None:
@@ -271,6 +274,7 @@ def main(
             _run_stage1(config)
             _run_stage2(config)
             _run_stage3(config)  # includes auto-score + UI
+            _run_stage4(config)  # export the dataset after UI is closed
         elif stage == 1:
             _run_stage1(config)
         elif stage == 2:

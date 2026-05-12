@@ -240,14 +240,23 @@ def run_streamlit_app():
 
         st.markdown("---")
         st.markdown("### Finish Review")
-        approve_unreviewed = st.checkbox("Approve all unreviewed samples (Export as they are)")
-        if st.button("Proceed to Stage 4 ➡️", type="primary", use_container_width=True):
+        
+        all_reviewed = (ap + rj) == len(data)
+        
+        if not all_reviewed:
+            approve_unreviewed = st.checkbox("Approve all unreviewed samples (Export as they are)")
+        else:
+            approve_unreviewed = False
+            st.success("All samples reviewed! Ready to export.")
+            
+        can_proceed = all_reviewed or approve_unreviewed
+        
+        if st.button("Proceed to Stage 4 ➡️", type="primary", use_container_width=True, disabled=not can_proceed):
             if approve_unreviewed:
                 for x in data:
                     if x.get("final_label") is None:
                         x["final_label"] = "approved"
                 _save_json(data, sp)
-            import os
             os._exit(0)
 
     if not filtered:

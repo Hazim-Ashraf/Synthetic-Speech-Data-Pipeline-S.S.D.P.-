@@ -22,6 +22,16 @@ A production-grade pipeline for generating synthetic speech training data target
 
 ---
 
+## Resumability & Generating New Data
+
+Because generating AI text and audio takes time, the pipeline relies heavily on checkpointing. If you request 50 samples in `config.yaml` and the pipeline successfully generates them, running it again will instantly skip generation because the target is already met.
+
+To generate completely **new** data, you have two options:
+1. **Generate more (Keep old data)**: Increase `num_samples` in `config.yaml` (e.g., from 50 to 100). The pipeline will resume from where it left off, generating 50 brand-new samples and appending them to your existing dataset.
+2. **Start completely from scratch**: Delete the Stage 1 checkpoints by running `rm data/manifests/stage1_*.json`. The pipeline's built-in *Freshness Detection* will automatically recognize that you generated new prompts, and it will securely wipe all your old `.wav` audio files to prevent data mixing before synthesizing the new ones.
+
+---
+
 ## Model Choices & Rationale
 
 ### Text Generation: Nile-Chat-4B (4-bit Quantized GGUF)

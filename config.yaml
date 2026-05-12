@@ -1,0 +1,47 @@
+# ═══════════════════════════════════════════════
+# SSDP — Synthetic Speech Data Pipeline Config
+# Egyptian Arabic STT Fine-Tuning Data Generation
+# ═══════════════════════════════════════════════
+
+# ── Text Generation (Stage 1) ────────────────
+# Nile-Chat-4B: Egyptian Arabic LLM by MBZUAI-Paris (Quantized)
+# Runs locally via llama-cpp-python — no API key needed
+text_gen_gguf_repo: "mradermacher/Nile-Chat-4B-GGUF"
+text_gen_gguf_file: "*Q4_K_M.gguf"
+text_gen_device: "mps"           # cpu / cuda / mps (mps for Mac M1)
+
+# ── HuggingFace Authentication ───────────────
+# Token is loaded from .env file (HF_TOKEN) or the HF_TOKEN env variable.
+# To set it: add HF_TOKEN=hf_xxx to your .env file (never commit .env)
+# Get one at: https://huggingface.co/settings/tokens
+hf_token: ""
+
+# ── Generation (Stage 1) ─────────────────────
+num_samples: 50                 # Total text prompts to generate
+generation_batch_size: 5        # Prompts per model call
+
+# ── TTS (Stage 2) ────────────────────────────
+batch_size: 5                   # TTS synthesis batch size
+audio_format: "wav"              # wav or mp3
+sample_rate: 22050
+tts_device: "cpu"                # cpu / cuda / mps (mps for Mac M1)
+tts_max_retries: 3               # Max retries per sample on failure
+
+# ── Review / Quality (Stage 3) ───────────────
+wer_auto_approve_threshold: 0.15 # WER < 15% → auto approve
+wer_auto_reject_threshold: 0.40  # WER > 40% → auto reject
+
+# ── ASR Backend (Stage 3) ────────────────────
+# Primary: "nemo" (NAMAA-Space/EgypTalk-ASR-v2 locally)
+# API: "hf_api" (NAMAA-Space/EgypTalk-ASR-v2 via Hugging Face API)
+# Colab API: "colab_api" (Use a Google Colab notebook as a remote server)
+# Fallback: "whisper" (openai-whisper)
+# Auto: tries nemo first, falls back to whisper
+asr_backend: "colab_api"
+colab_api_url: "https://washday-unsoiled-ammonium.ngrok-free.dev"  
+whisper_model_size: "large-v3"   # Only used if asr_backend is whisper/auto fallback
+
+# ── Export (Stage 4) ─────────────────────────
+output_dir: "data/"
+hf_dataset_name: "egyptian-arabic-ssdp"
+hf_repo_id: ""                   # Optional: push to HuggingFace Hub

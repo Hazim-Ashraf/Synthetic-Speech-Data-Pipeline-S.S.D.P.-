@@ -1,0 +1,31 @@
+# ── Core ──────────────────────────────────────
+pyyaml
+typer[all]
+tqdm
+rich
+
+# ── Stage 1: Text Generation (Nile-Chat-4B) ──
+llama-cpp-python
+
+# ── Stage 2: TTS Synthesis ───────────────────
+torch
+torchaudio
+huggingface_hub
+safetensors
+chatterbox-tts
+
+# ── Stage 3: Review & Scoring ────────────────
+streamlit
+jiwer
+
+# ASR — Primary (heavy install, may fail on some systems)
+# nemo_toolkit[asr]
+
+# ASR — Fallback (lightweight alternative)
+openai-whisper
+
+
+
+# ── Stage 4: Export ──────────────────────────
+datasets<3.0.0
+soundfile

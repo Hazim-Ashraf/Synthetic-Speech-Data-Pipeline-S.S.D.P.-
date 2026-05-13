@@ -17,7 +17,7 @@ text_gen_device: "mps"           # cpu / cuda / mps (mps for Mac M1)
 hf_token: ""
 
 # ── Generation (Stage 1) ─────────────────────
-num_samples: 10                 # Total text prompts to generate
+num_samples: 20                 # Total text prompts to generate
 generation_batch_size: 5        # Prompts per model call
 
 # ── TTS (Stage 2) ────────────────────────────

@@ -154,11 +154,10 @@ def run(config: Dict[str, Any]) -> None:
     is_fresh_run = False
     if not isinstance(progress, dict) or not progress:
         is_fresh_run = True
-    elif prompts_path.exists() and progress_path.exists():
-        if prompts_path.stat().st_mtime > progress_path.stat().st_mtime:
-            log.info("Stage 1 prompts are newer than Stage 2 progress. Forcing a fresh run.")
-            progress = {}
-            is_fresh_run = True
+    
+    # NOTE: We removed the timestamp-based "fresh run" detection here because 
+    # it was causing audio deletions on every run when using 'main.py --all'.
+    # Stage 2 will now only synthesize missing files by default.
 
     if is_fresh_run:
         # If progress is empty or forced fresh, clean the audio directory

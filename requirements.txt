@@ -29,3 +29,10 @@ openai-whisper
 # ── Stage 4: Export ──────────────────────────
 datasets<3.0.0
 soundfile
+
+# ── Track B: Real Speech Harvesting ─────────
+yt-dlp
+av<14.0.0                        # PyAV must match system ffmpeg (6.x)
+whisperx
+pydub
+ffmpeg-python

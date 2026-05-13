@@ -88,6 +88,7 @@ def run(config: Dict[str, Any]) -> None:
         "domain": [],
         "duration": [],
         "wer": [],
+        "source": [],
     }
 
     for s in valid:
@@ -97,6 +98,7 @@ def run(config: Dict[str, Any]) -> None:
         records["domain"].append(domain_map.get(s["id"], "general"))
         records["duration"].append(float(s.get("duration_sec", 0)))
         records["wer"].append(float(s.get("wer", 0)))
+        records["source"].append(s.get("source", "synthetic"))
 
     # ── Create HuggingFace Dataset ────────────────
     features = Features({
@@ -106,6 +108,7 @@ def run(config: Dict[str, Any]) -> None:
         "domain": Value("string"),
         "duration": Value("float32"),
         "wer": Value("float32"),
+        "source": Value("string"),
     })
 
     ds = Dataset.from_dict(records, features=features)
@@ -120,7 +123,7 @@ def run(config: Dict[str, Any]) -> None:
     with open(csv_path, "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(
             f,
-            fieldnames=["id", "text", "audio_path", "domain", "duration", "wer"],
+            fieldnames=["id", "text", "audio_path", "domain", "duration", "wer", "source"],
         )
         writer.writeheader()
         for s in valid:
@@ -131,6 +134,7 @@ def run(config: Dict[str, Any]) -> None:
                 "domain": domain_map.get(s["id"], "general"),
                 "duration": s.get("duration_sec", 0),
                 "wer": s.get("wer", 0),
+                "source": s.get("source", "synthetic"),
             })
     log.info(f"Metadata CSV saved to {csv_path}")
 
@@ -148,11 +152,16 @@ def run(config: Dict[str, Any]) -> None:
     avg_dur = sum(records["duration"]) / total if total else 0
     avg_wer = sum(records["wer"]) / total if total else 0
     domain_dist = Counter(records["domain"])
+    source_dist = Counter(records["source"])
 
     print("\n" + "=" * 50)
     print("  SSDP Export — Final Statistics")
     print("=" * 50)
-    print(f"  Total samples:     {total}")
+    print(f"  Total approved:    {total}")
+    synth_n = source_dist.get("synthetic", 0)
+    real_n = source_dist.get("real", 0)
+    print(f"  ├── Synthetic (Track A): {synth_n} samples")
+    print(f"  └── Real speech (Track B): {real_n} samples")
     print(f"  Avg duration:      {avg_dur:.2f}s")
     print(f"  Avg WER:           {avg_wer:.3f} ({avg_wer*100:.1f}%)")
     print(f"  Domain distribution:")

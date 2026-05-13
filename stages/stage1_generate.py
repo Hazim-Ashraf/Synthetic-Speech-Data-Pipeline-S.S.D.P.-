@@ -315,6 +315,17 @@ def run(config: Dict[str, Any]) -> None:
             "word_count": len(text.split()),
         })
 
+    # ── Only write if content changed to avoid triggering Stage 2 refresh ──
+    if manifest_path.exists():
+        try:
+            with open(manifest_path, "r", encoding="utf-8") as f:
+                old_manifest = json.load(f)
+            if old_manifest == manifest:
+                log.info("Manifest content unchanged. Skipping write to preserve timestamps.")
+                return
+        except Exception:
+            pass
+
     save_checkpoint(str(manifest_path), manifest)
     log.info(f"Stage 1 complete: {len(manifest)} prompts saved to {manifest_path}")
 

@@ -8,9 +8,11 @@ Auto-creates a virtual environment and installs dependencies on first run.
 Usage:
     python main.py --stage 1          # Generate text prompts via Nile-Chat-4B
     python main.py --stage 2          # Synthesize audio via NAMAA TTS
+    python main.py --stage 1b         # Track B: harvest real speech from YouTube
     python main.py --stage 3          # Auto-score + launch Streamlit review
     python main.py --stage 4          # Export approved samples as HF dataset
-    python main.py --all              # Run stages 1→2→auto-score→launch UI
+    python main.py --track-b          # Run Track B harvesting only
+    python main.py --all              # Run Track A (1→2) + Track B (1b) → 3 → 4
 """
 
 # ══════════════════════════════════════════════════
@@ -94,9 +96,9 @@ def _bootstrap():
         print("=" * 60)
 
         # Upgrade pip
-        print("\n→ Upgrading pip inside venv...")
+        print("\n→ Upgrading pip and setuptools inside venv...")
         subprocess.check_call(
-            [venv_python, "-m", "pip", "install", "--upgrade", "pip"],
+            [venv_python, "-m", "pip", "install", "--upgrade", "pip", "setuptools"],
             stdout=subprocess.DEVNULL,
             stderr=subprocess.DEVNULL,
         )
@@ -147,10 +149,32 @@ if _env_path.exists():
                 _key, _, _val = _line.partition("=")
                 os.environ.setdefault(_key.strip(), _val.strip())
 
+# Force progress bars for huggingface hub / tqdm even if not in an interactive terminal
+os.environ["TQDM_FORCE"] = "1"
+os.environ["TQDM_DISABLE"] = "0"
+os.environ["HF_HUB_DISABLE_PROGRESS_BARS"] = "0"
+
 from typing import Optional
+import logging
+logging.getLogger("huggingface_hub").setLevel(logging.INFO)
 
 import typer
 import yaml
+
+# ── PyTorch 2.6+ Compatibility Patch ─────────────
+# PyTorch 2.6 changed torch.load to default to weights_only=True,
+# which breaks pyannote.audio's lightning checkpoints. We monkey-patch
+# torch.load to default to False for our trusted HuggingFace models.
+try:
+    import torch
+    _original_load = torch.load
+    def _patched_load(*args, **kwargs):
+        if kwargs.get("weights_only") is None:
+            kwargs["weights_only"] = False
+        return _original_load(*args, **kwargs)
+    torch.load = _patched_load
+except ImportError:
+    pass
 
 sys.path.insert(0, str(PROJECT_ROOT))
 
@@ -205,6 +229,15 @@ def _run_stage2(config: dict) -> None:
     run(config)
 
 
+def _run_stage1b(config: dict) -> None:
+    """Stage 1b: Track B — Harvest real speech from YouTube."""
+    log.info("=" * 50)
+    log.info("STAGE 1b — Real Speech Harvesting (Track B)")
+    log.info("=" * 50)
+    from stages.stage1b_harvest import run
+    run(config)
+
+
 def _run_stage3(config: dict) -> None:
     """Stage 3: Auto-score then launch Streamlit review app."""
     log.info("=" * 50)
@@ -238,50 +271,64 @@ def _run_stage4(config: dict) -> None:
 
 @app.command()
 def main(
-    stage: Optional[int] = typer.Option(
+    stage: Optional[str] = typer.Option(
         None,
         "--stage",
         "-s",
-        help="Run a specific stage (1-4).",
-        min=1,
-        max=4,
+        help="Run a specific stage (1, 2, 1b, 3, or 4).",
     ),
     all_stages: bool = typer.Option(
         False,
         "--all",
         "-a",
-        help="Run all stages sequentially (1→2→auto-score→UI).",
+        help="Run all stages: Track A (1→2) + Track B (1b) → 3 → 4.",
+    ),
+    track_b: bool = typer.Option(
+        False,
+        "--track-b",
+        help="Run Track B harvesting only (Stage 1b).",
     ),
 ) -> None:
     """
     Run the SSDP pipeline stages.
 
     Stages:
-      1 = Text generation (Nile-Chat-4B)
-      2 = TTS synthesis (NAMAA Egyptian TTS)
-      3 = Auto-scoring + Streamlit review app
-      4 = Dataset export (HuggingFace format)
+      1  = Text generation (Nile-Chat-4B)
+      2  = TTS synthesis (NAMAA Egyptian TTS)
+      1b = Track B: Real speech harvesting from YouTube
+      3  = Auto-scoring + Streamlit review app
+      4  = Dataset export (HuggingFace format)
     """
-    if stage is None and not all_stages:
-        typer.echo("Error: specify --stage N or --all. Use --help for info.")
+    valid_stages = {"1", "2", "1b", "3", "4"}
+    if stage and stage not in valid_stages:
+        typer.echo(f"Error: --stage must be one of {valid_stages}. Got '{stage}'.")
+        raise typer.Exit(1)
+
+    if stage is None and not all_stages and not track_b:
+        typer.echo("Error: specify --stage N, --all, or --track-b. Use --help for info.")
         raise typer.Exit(1)
 
     config = _load_config()
 
     try:
         if all_stages:
-            log.info("Running ALL stages sequentially.")
+            log.info("Running ALL stages sequentially (Track A + Track B).")
             _run_stage1(config)
             _run_stage2(config)
-            _run_stage3(config)  # includes auto-score + UI
-            _run_stage4(config)  # export the dataset after UI is closed
-        elif stage == 1:
+            _run_stage1b(config)  # Track B harvesting
+            _run_stage3(config)   # unified review of both tracks
+            _run_stage4(config)   # export combined dataset
+        elif track_b:
+            _run_stage1b(config)
+        elif stage == "1":
             _run_stage1(config)
-        elif stage == 2:
+        elif stage == "2":
             _run_stage2(config)
-        elif stage == 3:
+        elif stage == "1b":
+            _run_stage1b(config)
+        elif stage == "3":
             _run_stage3(config)
-        elif stage == 4:
+        elif stage == "4":
             _run_stage4(config)
 
         log.info("Pipeline execution complete.")

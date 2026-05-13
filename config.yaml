@@ -17,7 +17,7 @@ text_gen_device: "mps"           # cpu / cuda / mps (mps for Mac M1)
 hf_token: ""
 
 # ── Generation (Stage 1) ─────────────────────
-num_samples: 50                 # Total text prompts to generate
+num_samples: 10                 # Total text prompts to generate
 generation_batch_size: 5        # Prompts per model call
 
 # ── TTS (Stage 2) ────────────────────────────
@@ -45,3 +45,16 @@ whisper_model_size: "large-v3"   # Only used if asr_backend is whisper/auto fall
 output_dir: "data/"
 hf_dataset_name: "egyptian-arabic-ssdp"
 hf_repo_id: ""                   # Optional: push to HuggingFace Hub
+
+# ── Track B — Real Speech Harvesting ─────────
+track_b_enabled: true
+
+youtube_urls:
+  - "https://www.youtube.com/watch?v=yfAV4fekQhw&t=3s"   # Replace with real Egyptian Arabic URLs
+
+min_segment_duration: 2.0        # seconds — discard very short clips
+max_segment_duration: 15.0       # seconds — discard very long clips
+max_non_arabic_ratio: 0.30       # discard segments with >30% non-Arabic chars
+num_real_samples: 100            # stop after harvesting this many approved segments
+whisperx_model: "medium"       # WhisperX model size
+whisperx_device: "cpu"           # cpu / cuda / mps

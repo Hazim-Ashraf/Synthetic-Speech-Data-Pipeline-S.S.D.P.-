@@ -1,32 +1,32 @@
 {
   "0001": {
     "status": "done",
-    "duration": 1.6,
+    "duration": 1.32,
     "audio_path": "data/audio/0001.wav"
   },
   "0002": {
     "status": "done",
-    "duration": 1.6,
+    "duration": 1.28,
     "audio_path": "data/audio/0002.wav"
   },
   "0003": {
     "status": "done",
-    "duration": 2.16,
+    "duration": 2.0,
     "audio_path": "data/audio/0003.wav"
   },
   "0004": {
     "status": "done",
-    "duration": 1.88,
+    "duration": 2.28,
     "audio_path": "data/audio/0004.wav"
   },
   "0005": {
     "status": "done",
-    "duration": 1.28,
+    "duration": 1.48,
     "audio_path": "data/audio/0005.wav"
   },
   "0006": {
     "status": "done",
-    "duration": 2.28,
+    "duration": 2.72,
     "audio_path": "data/audio/0006.wav"
   },
   "0007": {
@@ -36,167 +36,17 @@
   },
   "0008": {
     "status": "done",
-    "duration": 1.68,
+    "duration": 2.16,
     "audio_path": "data/audio/0008.wav"
   },
   "0009": {
     "status": "done",
-    "duration": 1.64,
+    "duration": 2.04,
     "audio_path": "data/audio/0009.wav"
   },
   "0010": {
     "status": "done",
     "duration": 1.8,
     "audio_path": "data/audio/0010.wav"
-  },
-  "0011": {
-    "status": "done",
-    "duration": 2.16,
-    "audio_path": "data/audio/0011.wav"
-  },
-  "0012": {
-    "status": "done",
-    "duration": 1.36,
-    "audio_path": "data/audio/0012.wav"
-  },
-  "0013": {
-    "status": "done",
-    "duration": 3.36,
-    "audio_path": "data/audio/0013.wav"
-  },
-  "0014": {
-    "status": "done",
-    "duration": 2.0,
-    "audio_path": "data/audio/0014.wav"
-  },
-  "0015": {
-    "status": "done",
-    "duration": 2.24,
-    "audio_path": "data/audio/0015.wav"
-  },
-  "0016": {
-    "status": "done",
-    "duration": 1.88,
-    "audio_path": "data/audio/0016.wav"
-  },
-  "0017": {
-    "status": "done",
-    "duration": 2.04,
-    "audio_path": "data/audio/0017.wav"
-  },
-  "0018": {
-    "status": "done",
-    "duration": 2.28,
-    "audio_path": "data/audio/0018.wav"
-  },
-  "0019": {
-    "status": "done",
-    "duration": 2.0,
-    "audio_path": "data/audio/0019.wav"
-  },
-  "0020": {
-    "status": "done",
-    "duration": 2.36,
-    "audio_path": "data/audio/0020.wav"
-  },
-  "0021": {
-    "status": "done",
-    "duration": 2.36,
-    "audio_path": "data/audio/0021.wav"
-  },
-  "0022": {
-    "status": "done",
-    "duration": 2.84,
-    "audio_path": "data/audio/0022.wav"
-  },
-  "0023": {
-    "status": "done",
-    "duration": 2.24,
-    "audio_path": "data/audio/0023.wav"
-  },
-  "0024": {
-    "status": "done",
-    "duration": 2.4,
-    "audio_path": "data/audio/0024.wav"
-  },
-  "0025": {
-    "status": "done",
-    "duration": 3.0,
-    "audio_path": "data/audio/0025.wav"
-  },
-  "0026": {
-    "status": "done",
-    "duration": 2.92,
-    "audio_path": "data/audio/0026.wav"
-  },
-  "0027": {
-    "status": "done",
-    "duration": 3.12,
-    "audio_path": "data/audio/0027.wav"
-  },
-  "0028": {
-    "status": "done",
-    "duration": 3.56,
-    "audio_path": "data/audio/0028.wav"
-  },
-  "0029": {
-    "status": "done",
-    "duration": 2.76,
-    "audio_path": "data/audio/0029.wav"
-  },
-  "0030": {
-    "status": "done",
-    "duration": 1.56,
-    "audio_path": "data/audio/0030.wav"
-  },
-  "0031": {
-    "status": "done",
-    "duration": 2.4,
-    "audio_path": "data/audio/0031.wav"
-  },
-  "0032": {
-    "status": "done",
-    "duration": 1.64,
-    "audio_path": "data/audio/0032.wav"
-  },
-  "0033": {
-    "status": "done",
-    "duration": 2.52,
-    "audio_path": "data/audio/0033.wav"
-  },
-  "0034": {
-    "status": "done",
-    "duration": 3.04,
-    "audio_path": "data/audio/0034.wav"
-  },
-  "0035": {
-    "status": "done",
-    "duration": 2.04,
-    "audio_path": "data/audio/0035.wav"
-  },
-  "0036": {
-    "status": "done",
-    "duration": 2.36,
-    "audio_path": "data/audio/0036.wav"
-  },
-  "0037": {
-    "status": "done",
-    "duration": 1.88,
-    "audio_path": "data/audio/0037.wav"
-  },
-  "0038": {
-    "status": "done",
-    "duration": 2.08,
-    "audio_path": "data/audio/0038.wav"
-  },
-  "0039": {
-    "status": "done",
-    "duration": 1.64,
-    "audio_path": "data/audio/0039.wav"
-  },
-  "0040": {
-    "status": "done",
-    "duration": 2.2,
-    "audio_path": "data/audio/0040.wav"
   }
 }

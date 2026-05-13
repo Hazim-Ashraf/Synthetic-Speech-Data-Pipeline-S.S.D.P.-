@@ -105,6 +105,7 @@ def _load_asr(config):
     import whisper
     sz = config.get("whisper_model_size", "large-v3")
     print(f"[ASR] Loading Whisper {sz}...")
+    print(f"      (Note: If downloading weights or loading into CPU RAM, this may take a few minutes. Progress will be shown below.)")
     mdl = whisper.load_model(sz)
     def fn(p):
         return mdl.transcribe(p, language="ar").get("text", "").strip()
@@ -132,24 +133,47 @@ def run_auto_scoring(config):
     from tqdm import tqdm
 
     od = Path(config.get("output_dir", "data"))
-    manifest = load_checkpoint(str(od / "manifests/stage2_manifest.json"))
+
+    # ── Merge Track A + Track B manifests ─────────
+    manifest = []
+
+    # Track A — synthetic
+    track_a_path = od / "manifests/stage2_manifest.json"
+    if track_a_path.exists():
+        track_a = load_checkpoint(str(track_a_path))
+        if track_a:
+            for s in track_a:
+                s.setdefault("source", "synthetic")
+            manifest.extend(track_a)
+
+    # Track B — real speech
+    track_b_path = od / "manifests/stage1b_manifest.json"
+    if track_b_path.exists():
+        track_b = load_checkpoint(str(track_b_path))
+        if track_b:
+            # source field already set to "real" in stage1b
+            manifest.extend(track_b)
+
     if not manifest:
-        print("Error: Stage 2 manifest not found. Run Stage 2 first.")
+        print("Error: No manifests found. Run Stage 2 and/or Stage 1b first.")
         return
     manifest = [m for m in manifest if m.get("status") == "done"]
 
     scores_path = od / "manifests/stage3_scores.json"
     prog_path = od / "manifests/stage3_scores_progress.json"
-    stage2_path = od / "manifests/stage2_manifest.json"
 
     progress = load_checkpoint(str(prog_path))
     if not isinstance(progress, dict): progress = {}
     
-    # Force fresh run if Stage 2 manifest is newer than Stage 3 progress
-    if stage2_path.exists() and prog_path.exists():
-        if stage2_path.stat().st_mtime > prog_path.stat().st_mtime:
-            print("Stage 2 manifest is newer than Stage 3 progress. Forcing fresh scoring run.")
-            progress = {}
+    # Force fresh run if either manifest is newer than Stage 3 progress
+    if prog_path.exists():
+        prog_mtime = prog_path.stat().st_mtime
+        for mpath in [track_a_path, track_b_path]:
+            if mpath.exists() and mpath.stat().st_mtime > prog_mtime:
+                print(f"{mpath.name} is newer than Stage 3 progress. Forcing fresh scoring run.")
+                progress = {}
+                break
+
     pending = [m for m in manifest if m["id"] not in progress]
     print(f"[Scoring] {len(progress)} done, {len(pending)} remaining.")
 
@@ -170,12 +194,13 @@ def run_auto_scoring(config):
             save_checkpoint(str(prog_path), progress)
         print(f"[Scoring] ASR backend: {asr_name}")
 
-    # Build scores file
+    # Build scores file (preserve source field)
     scores = []
     for m in manifest:
         info = progress.get(m["id"], {})
         scores.append({"id": m["id"], "text": m["text"],
             "audio_path": m["audio_path"], "duration_sec": m.get("duration_sec", 0),
+            "source": m.get("source", "synthetic"),
             "wer": info.get("wer", 1.0),
             "asr_hypothesis": info.get("asr_hypothesis", ""),
             "auto_label": info.get("auto_label", "auto_rejected"),
@@ -223,8 +248,15 @@ def run_streamlit_app():
     with st.sidebar:
         st.title("🎧 SSDP Review")
         st.markdown("---")
-        filt = st.selectbox("Filter", ["all","needs_review","auto_approved","auto_rejected"])
-        filtered = data if filt == "all" else [s for s in data if _eff_label(s) == filt]
+        filt = st.selectbox("Filter", ["all","needs_review","auto_approved","auto_rejected","synthetic_only","real_only"])
+        if filt == "synthetic_only":
+            filtered = [s for s in data if s.get("source", "synthetic") == "synthetic"]
+        elif filt == "real_only":
+            filtered = [s for s in data if s.get("source", "synthetic") == "real"]
+        elif filt == "all":
+            filtered = data
+        else:
+            filtered = [s for s in data if _eff_label(s) == filt]
 
         st.markdown("---")
         labels = [_eff_label(s) for s in data]
@@ -234,6 +266,14 @@ def run_streamlit_app():
         for val, lbl, clr in [(ap,"Approved","#a6e3a1"),(rj,"Rejected","#f38ba8"),(pn,"Pending","#f9e2af")]:
             st.markdown(f'<div class="stat-card"><div class="stat-num" style="color:{clr}">{val}</div>'
                         f'<div class="stat-lbl">{lbl}</div></div>', unsafe_allow_html=True)
+
+        # Source breakdown
+        synth_count = sum(1 for s in data if s.get("source", "synthetic") == "synthetic")
+        real_count = sum(1 for s in data if s.get("source", "synthetic") == "real")
+        if real_count > 0:
+            st.markdown("---")
+            st.caption(f"🤖 Synthetic: {synth_count}    🎙️ Real: {real_count}")
+
         st.markdown("---")
         st.progress((ap+rj)/len(data) if data else 0)
         st.caption(f"{ap+rj}/{len(data)} reviewed")
@@ -267,6 +307,13 @@ def run_streamlit_app():
     s = filtered[st.session_state.idx]
 
     st.markdown(f"### Sample `{s['id']}` — {st.session_state.idx+1}/{len(filtered)}")
+
+    # Source badge
+    src = s.get("source", "synthetic")
+    if src == "real":
+        st.markdown('<span class="bb">🎙️ Real Speech</span>', unsafe_allow_html=True)
+    else:
+        st.markdown('<span class="bb">🤖 Synthetic</span>', unsafe_allow_html=True)
 
     # Navigation
     c1, _, c3 = st.columns([1,3,1])

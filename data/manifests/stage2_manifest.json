@@ -1,0 +1,142 @@
+[
+  {
+    "id": "0001",
+    "text": "يا باشا إيه الأخبار؟",
+    "audio_path": "data/audio/0001.wav",
+    "duration_sec": 1.32,
+    "status": "done"
+  },
+  {
+    "id": "0002",
+    "text": "يا ولاد ركزوا في الدرس",
+    "audio_path": "data/audio/0002.wav",
+    "duration_sec": 1.28,
+    "status": "done"
+  },
+  {
+    "id": "0003",
+    "text": "يا باشا أقدر أساعد حضرتك إزاي؟",
+    "audio_path": "data/audio/0003.wav",
+    "duration_sec": 2.0,
+    "status": "done"
+  },
+  {
+    "id": "0004",
+    "text": "يا باشا عايز حاجة من اللي هناك",
+    "audio_path": "data/audio/0004.wav",
+    "duration_sec": 2.28,
+    "status": "done"
+  },
+  {
+    "id": "0005",
+    "text": "الأوردر لسه ماجاش",
+    "audio_path": "data/audio/0005.wav",
+    "duration_sec": 1.48,
+    "status": "done"
+  },
+  {
+    "id": "0006",
+    "text": "معلش يا عم احنا مش موجودين النهاردة",
+    "audio_path": "data/audio/0006.wav",
+    "duration_sec": 2.72,
+    "status": "done"
+  },
+  {
+    "id": "0007",
+    "text": "ممكن توضحلي الطريق لبيتهم?",
+    "audio_path": "data/audio/0007.wav",
+    "duration_sec": 1.56,
+    "status": "done"
+  },
+  {
+    "id": "0008",
+    "text": "إيه يا ولاد عملتوا إيه في المذاكرة؟",
+    "audio_path": "data/audio/0008.wav",
+    "duration_sec": 2.16,
+    "status": "done"
+  },
+  {
+    "id": "0009",
+    "text": "أهلاً، يا معلم، إزيك؟",
+    "audio_path": "data/audio/0009.wav",
+    "duration_sec": 2.04,
+    "status": "done"
+  },
+  {
+    "id": "0010",
+    "text": "أهو ده البقالة بتاعتك، يا باشا.",
+    "audio_path": "data/audio/0010.wav",
+    "duration_sec": 1.8,
+    "status": "done"
+  },
+  {
+    "id": "0011",
+    "text": "يا جماعة، الأوردر ده راح في داهية، ماشي؟",
+    "audio_path": "data/audio/0011.wav",
+    "duration_sec": 2.48,
+    "status": "done"
+  },
+  {
+    "id": "0012",
+    "text": "يا صاحبي، إيه أخبارك؟",
+    "audio_path": "data/audio/0012.wav",
+    "duration_sec": 1.64,
+    "status": "done"
+  },
+  {
+    "id": "0013",
+    "text": "بص يا معلم، مش عارف أصلح العجلة دي، أعمل إيه؟",
+    "audio_path": "data/audio/0013.wav",
+    "duration_sec": 3.0,
+    "status": "done"
+  },
+  {
+    "id": "0014",
+    "text": "القميص ده عليه خصم حلو أوي",
+    "audio_path": "data/audio/0014.wav",
+    "duration_sec": 2.0,
+    "status": "done"
+  },
+  {
+    "id": "0015",
+    "text": "يا فندم أقدر أساعد حضرتك إزاي؟",
+    "audio_path": "data/audio/0015.wav",
+    "duration_sec": 2.2,
+    "status": "done"
+  },
+  {
+    "id": "0016",
+    "text": "يا ولاد ركزوا معايا في الدرس ده",
+    "audio_path": "data/audio/0016.wav",
+    "duration_sec": 1.88,
+    "status": "done"
+  },
+  {
+    "id": "0017",
+    "text": "يا جماعة الأوردر اتأخر جدا",
+    "audio_path": "data/audio/0017.wav",
+    "duration_sec": 2.32,
+    "status": "done"
+  },
+  {
+    "id": "0018",
+    "text": "صباح الفل يا باشا عامل إيه؟",
+    "audio_path": "data/audio/0018.wav",
+    "duration_sec": 1.6,
+    "status": "done"
+  },
+  {
+    "id": "0019",
+    "text": "الأوردر اتأخر جدا يا جماعة",
+    "audio_path": "data/audio/0019.wav",
+    "duration_sec": 2.2,
+    "status": "done"
+  },
+  {
+    "id": "0020",
+    "text": "ازيك يا باشا عامل إيه؟",
+    "audio_path": "data/audio/0020.wav",
+    "duration_sec": 1.44,
+    "status": "done"
+  }
+]

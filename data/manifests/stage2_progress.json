@@ -1,0 +1,102 @@
+{
+  "0001": {
+    "status": "done",
+    "duration": 1.32,
+    "audio_path": "data/audio/0001.wav"
+  },
+  "0002": {
+    "status": "done",
+    "duration": 1.28,
+    "audio_path": "data/audio/0002.wav"
+  },
+  "0003": {
+    "status": "done",
+    "duration": 2.0,
+    "audio_path": "data/audio/0003.wav"
+  },
+  "0004": {
+    "status": "done",
+    "duration": 2.28,
+    "audio_path": "data/audio/0004.wav"
+  },
+  "0005": {
+    "status": "done",
+    "duration": 1.48,
+    "audio_path": "data/audio/0005.wav"
+  },
+  "0006": {
+    "status": "done",
+    "duration": 2.72,
+    "audio_path": "data/audio/0006.wav"
+  },
+  "0007": {
+    "status": "done",
+    "duration": 1.56,
+    "audio_path": "data/audio/0007.wav"
+  },
+  "0008": {
+    "status": "done",
+    "duration": 2.16,
+    "audio_path": "data/audio/0008.wav"
+  },
+  "0009": {
+    "status": "done",
+    "duration": 2.04,
+    "audio_path": "data/audio/0009.wav"
+  },
+  "0010": {
+    "status": "done",
+    "duration": 1.8,
+    "audio_path": "data/audio/0010.wav"
+  },
+  "0011": {
+    "status": "done",
+    "duration": 2.48,
+    "audio_path": "data/audio/0011.wav"
+  },
+  "0012": {
+    "status": "done",
+    "duration": 1.64,
+    "audio_path": "data/audio/0012.wav"
+  },
+  "0013": {
+    "status": "done",
+    "duration": 3.0,
+    "audio_path": "data/audio/0013.wav"
+  },
+  "0014": {
+    "status": "done",
+    "duration": 2.0,
+    "audio_path": "data/audio/0014.wav"
+  },
+  "0015": {
+    "status": "done",
+    "duration": 2.2,
+    "audio_path": "data/audio/0015.wav"
+  },
+  "0016": {
+    "status": "done",
+    "duration": 1.88,
+    "audio_path": "data/audio/0016.wav"
+  },
+  "0017": {
+    "status": "done",
+    "duration": 2.32,
+    "audio_path": "data/audio/0017.wav"
+  },
+  "0018": {
+    "status": "done",
+    "duration": 1.6,
+    "audio_path": "data/audio/0018.wav"
+  },
+  "0019": {
+    "status": "done",
+    "duration": 2.2,
+    "audio_path": "data/audio/0019.wav"
+  },
+  "0020": {
+    "status": "done",
+    "duration": 1.44,
+    "audio_path": "data/audio/0020.wav"
+  }
+}

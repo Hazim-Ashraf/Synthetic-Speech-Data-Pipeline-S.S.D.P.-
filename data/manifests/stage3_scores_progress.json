@@ -1,0 +1,184 @@
+{
+  "0001": {
+    "wer": 0.0,
+    "asr_hypothesis": "يا باشا ايه الاخبار",
+    "auto_label": "auto_approved",
+    "final_label": null,
+    "reviewer_notes": ""
+  },
+  "0002": {
+    "wer": 0.0,
+    "asr_hypothesis": "يا ولاد ركزوا في الدرس",
+    "auto_label": "auto_approved",
+    "final_label": null,
+    "reviewer_notes": ""
+  },
+  "0003": {
+    "wer": 0.0,
+    "asr_hypothesis": "يا باشا اقدر اساعد حضرتك ازاي",
+    "auto_label": "auto_approved",
+    "final_label": null,
+    "reviewer_notes": ""
+  },
+  "0004": {
+    "wer": 0.1429,
+    "asr_hypothesis": "يا باشا عايز حاجه من ال هناك",
+    "auto_label": "auto_approved",
+    "final_label": null,
+    "reviewer_notes": ""
+  },
+  "0005": {
+    "wer": 0.0,
+    "asr_hypothesis": "الاوردر لسه ماجاش",
+    "auto_label": "auto_approved",
+    "final_label": null,
+    "reviewer_notes": ""
+  },
+  "0006": {
+    "wer": 0.2857,
+    "asr_hypothesis": "معلش ياعم احنا مش موجودين النهارده",
+    "auto_label": "needs_review",
+    "final_label": null,
+    "reviewer_notes": ""
+  },
+  "0007": {
+    "wer": 0.0,
+    "asr_hypothesis": "ممكن توضحلي الطريق لبيتهم",
+    "auto_label": "auto_approved",
+    "final_label": null,
+    "reviewer_notes": ""
+  },
+  "0008": {
+    "wer": 0.0,
+    "asr_hypothesis": "ايه يا ولاد عملتوا ايه في المذاكره",
+    "auto_label": "auto_approved",
+    "final_label": null,
+    "reviewer_notes": ""
+  },
+  "0009": {
+    "wer": 0.0,
+    "asr_hypothesis": "اهلا يا معلم ازيك",
+    "auto_label": "auto_approved",
+    "final_label": null,
+    "reviewer_notes": ""
+  },
+  "0010": {
+    "wer": 0.1667,
+    "asr_hypothesis": "اهو ده البقاله بتاعتك جعطتك يا باشا",
+    "auto_label": "needs_review",
+    "final_label": null,
+    "reviewer_notes": ""
+  },
+  "0011": {
+    "wer": 0.25,
+    "asr_hypothesis": "يا جماعه الاوردر ده راح في ده هي ماشي",
+    "auto_label": "needs_review",
+    "final_label": null,
+    "reviewer_notes": ""
+  },
+  "0012": {
+    "wer": 0.0,
+    "asr_hypothesis": "يا صاحبي ايه اخبارك",
+    "auto_label": "auto_approved",
+    "final_label": null,
+    "reviewer_notes": ""
+  },
+  "0013": {
+    "wer": 0.0,
+    "asr_hypothesis": "بص يا معلم مش عارف اصلح العجله دي اعمل ايه",
+    "auto_label": "auto_approved",
+    "final_label": null,
+    "reviewer_notes": ""
+  },
+  "0014": {
+    "wer": 0.3333,
+    "asr_hypothesis": "القميص ده عليه خصمه حلوه اوي",
+    "auto_label": "needs_review",
+    "final_label": null,
+    "reviewer_notes": ""
+  },
+  "0015": {
+    "wer": 0.0,
+    "asr_hypothesis": "يا فندم اقدر اساعد حضرتك ازاي",
+    "auto_label": "auto_approved",
+    "final_label": null,
+    "reviewer_notes": ""
+  },
+  "0016": {
+    "wer": 0.2857,
+    "asr_hypothesis": "اولاد ركزوا معايا في الدرس ده",
+    "auto_label": "needs_review",
+    "final_label": null,
+    "reviewer_notes": ""
+  },
+  "0017": {
+    "wer": 0.0,
+    "asr_hypothesis": "يا جماعه الاوردر اتاخر جدا",
+    "auto_label": "auto_approved",
+    "final_label": null,
+    "reviewer_notes": ""
+  },
+  "0018": {
+    "wer": 0.0,
+    "asr_hypothesis": "صباح الفل يا باشا عامل ايه",
+    "auto_label": "auto_approved",
+    "final_label": null,
+    "reviewer_notes": ""
+  },
+  "0019": {
+    "wer": 0.0,
+    "asr_hypothesis": "الاوردر اتاخر جدا يا جماعه",
+    "auto_label": "auto_approved",
+    "final_label": null,
+    "reviewer_notes": ""
+  },
+  "0020": {
+    "wer": 0.2,
+    "asr_hypothesis": "ازديك يا باشا عامل ايه",
+    "auto_label": "needs_review",
+    "final_label": null,
+    "reviewer_notes": ""
+  },
+  "real_yfAV4fekQhw_0000": {
+    "wer": 0.25,
+    "asr_hypothesis": "بيعاني من تروما وعشان كده عزيزي مهم اوي اننا نعرف المرض ده لاي مدي قادر ياثر علينا ويغير تفاصيل كتير في حياتنا او حياه الناس اللي بنحبها ومهم برضه نعرف ازاي نقدر نتجوزه ومنفضلش عايشين ضحايا ليه طول عمرنا",
+    "auto_label": "needs_review",
+    "final_label": null,
+    "reviewer_notes": ""
+  },
+  "real_yfAV4fekQhw_0001": {
+    "wer": 0.25,
+    "asr_hypothesis": "بتفقد احساسها بالامان الكلام ده مش مبالغ اه",
+    "auto_label": "needs_review",
+    "final_label": null,
+    "reviewer_notes": ""
+  },
+  "real_yfAV4fekQhw_0002": {
+    "wer": 0.2955,
+    "asr_hypothesis": "الانسان ممكن يكون تعرض لموقف صعب في لحظه ما بس انه يفضل لازق في اللحظه دي وعايش على حسها مشاعر خوف وقلق حتى وهو نايم في سريره ومتغطي بالحاف و بطانيه ممكن حد يشوف الكلام ده مش منطقي وصاحبه بيبالغ وبيتدلع عزيز انت صح بس غلط",
+    "auto_label": "needs_review",
+    "final_label": null,
+    "reviewer_notes": ""
+  },
+  "real_yfAV4fekQhw_0003": {
+    "wer": 0.2083,
+    "asr_hypothesis": "هتفريز هتثبت مكانه لحد ما الخطر يمشي الخطر مشي خلاص مخك يقولك الحمدلله جات سليمه ويرجع بقى القياده التانيه للنيو كورتك كل حاجه ترجع طبيعيه زي ما كانت لكن ايه بقى اللي هيحصل لو الخطر ده ممشيش ايه اللي بيحصل لو الخطر تغلب عليه واسوا مخاوفك",
+    "auto_label": "needs_review",
+    "final_label": null,
+    "reviewer_notes": ""
+  },
+  "real_yfAV4fekQhw_0004": {
+    "wer": 0.2903,
+    "asr_hypothesis": "خليني اقولك ان المخ الانساني مذهل بكل مقاييس ومع كل البهدله اللي التروما بتبهدله دي بيفضل عنده القدره على المعافره والتعافي الموضوع مش سهل وبياخد وقت ولكنه مش مستحيل",
+    "auto_label": "needs_review",
+    "final_label": null,
+    "reviewer_notes": ""
+  },
+  "real_yfAV4fekQhw_0005": {
+    "wer": 0.4906,
+    "asr_hypothesis": "انا موجود عشانك بس شوف يا عزيزي الحلقات اللي فاتت وفي الحلقات اللي جايه نزل على صلاتك احنا على اليوتيوب اشترك على القناه وعشان عزيزي سمعت هذه الحلقه ما تروحش بقى تكتب بوستات لما يجيلك الاهتمام بالشخص الغلط انا بحبك وعايزك تحبني انا مش اهتمام الشخص الغلط انا اهتمام الشخص الصح",
+    "auto_label": "auto_rejected",
+    "final_label": null,
+    "reviewer_notes": ""
+  }
+}

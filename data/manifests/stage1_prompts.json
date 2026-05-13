@@ -1,0 +1,142 @@
+[
+  {
+    "id": "0001",
+    "text": "يا باشا إيه الأخبار؟",
+    "domain": "daily_greetings",
+    "length_class": "short",
+    "word_count": 4
+  },
+  {
+    "id": "0002",
+    "text": "يا ولاد ركزوا في الدرس",
+    "domain": "teacher_students",
+    "length_class": "short",
+    "word_count": 5
+  },
+  {
+    "id": "0003",
+    "text": "يا باشا أقدر أساعد حضرتك إزاي؟",
+    "domain": "customer_service",
+    "length_class": "medium",
+    "word_count": 6
+  },
+  {
+    "id": "0004",
+    "text": "يا باشا عايز حاجة من اللي هناك",
+    "domain": "daily_greetings",
+    "length_class": "medium",
+    "word_count": 7
+  },
+  {
+    "id": "0005",
+    "text": "الأوردر لسه ماجاش",
+    "domain": "phone_calls",
+    "length_class": "short",
+    "word_count": 3
+  },
+  {
+    "id": "0006",
+    "text": "معلش يا عم احنا مش موجودين النهاردة",
+    "domain": "phone_calls",
+    "length_class": "medium",
+    "word_count": 7
+  },
+  {
+    "id": "0007",
+    "text": "ممكن توضحلي الطريق لبيتهم?",
+    "domain": "family",
+    "length_class": "short",
+    "word_count": 4
+  },
+  {
+    "id": "0008",
+    "text": "إيه يا ولاد عملتوا إيه في المذاكرة؟",
+    "domain": "family",
+    "length_class": "medium",
+    "word_count": 7
+  },
+  {
+    "id": "0009",
+    "text": "أهلاً، يا معلم، إزيك؟",
+    "domain": "daily_greetings",
+    "length_class": "short",
+    "word_count": 4
+  },
+  {
+    "id": "0010",
+    "text": "أهو ده البقالة بتاعتك، يا باشا.",
+    "domain": "daily_greetings",
+    "length_class": "medium",
+    "word_count": 6
+  },
+  {
+    "id": "0011",
+    "text": "يا جماعة، الأوردر ده راح في داهية، ماشي؟",
+    "domain": "phone_calls",
+    "length_class": "medium",
+    "word_count": 8
+  },
+  {
+    "id": "0012",
+    "text": "يا صاحبي، إيه أخبارك؟",
+    "domain": "daily_greetings",
+    "length_class": "short",
+    "word_count": 4
+  },
+  {
+    "id": "0013",
+    "text": "بص يا معلم، مش عارف أصلح العجلة دي، أعمل إيه؟",
+    "domain": "daily_greetings",
+    "length_class": "medium",
+    "word_count": 10
+  },
+  {
+    "id": "0014",
+    "text": "القميص ده عليه خصم حلو أوي",
+    "domain": "shopping",
+    "length_class": "medium",
+    "word_count": 6
+  },
+  {
+    "id": "0015",
+    "text": "يا فندم أقدر أساعد حضرتك إزاي؟",
+    "domain": "customer_service",
+    "length_class": "medium",
+    "word_count": 6
+  },
+  {
+    "id": "0016",
+    "text": "يا ولاد ركزوا معايا في الدرس ده",
+    "domain": "teacher_students",
+    "length_class": "medium",
+    "word_count": 7
+  },
+  {
+    "id": "0017",
+    "text": "يا جماعة الأوردر اتأخر جدا",
+    "domain": "phone_calls",
+    "length_class": "short",
+    "word_count": 5
+  },
+  {
+    "id": "0018",
+    "text": "صباح الفل يا باشا عامل إيه؟",
+    "domain": "daily_greetings",
+    "length_class": "medium",
+    "word_count": 6
+  },
+  {
+    "id": "0019",
+    "text": "الأوردر اتأخر جدا يا جماعة",
+    "domain": "phone_calls",
+    "length_class": "short",
+    "word_count": 5
+  },
+  {
+    "id": "0020",
+    "text": "ازيك يا باشا عامل إيه؟",
+    "domain": "daily_greetings",
+    "length_class": "short",
+    "word_count": 5
+  }
+]

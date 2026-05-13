@@ -1,0 +1,27 @@
+id,text,audio_path,domain,duration,wer,source
+0001,يا باشا إيه الأخبار؟,data/audio/0001.wav,daily_greetings,1.32,0.0,synthetic
+0002,يا ولاد ركزوا في الدرس,data/audio/0002.wav,teacher_students,1.28,0.0,synthetic
+0003,يا باشا أقدر أساعد حضرتك إزاي؟,data/audio/0003.wav,customer_service,2.0,0.0,synthetic
+0004,يا باشا عايز حاجة من اللي هناك,data/audio/0004.wav,daily_greetings,2.28,0.1429,synthetic
+0005,الأوردر لسه ماجاش,data/audio/0005.wav,phone_calls,1.48,0.0,synthetic
+0006,معلش يا عم احنا مش موجودين النهاردة,data/audio/0006.wav,phone_calls,2.72,0.2857,synthetic
+0007,ممكن توضحلي الطريق لبيتهم?,data/audio/0007.wav,family,1.56,0.0,synthetic
+0008,إيه يا ولاد عملتوا إيه في المذاكرة؟,data/audio/0008.wav,family,2.16,0.0,synthetic
+0009,أهلاً، يا معلم، إزيك؟,data/audio/0009.wav,daily_greetings,2.04,0.0,synthetic
+0010,أهو ده البقالة بتاعتك، يا باشا.,data/audio/0010.wav,daily_greetings,1.8,0.1667,synthetic
+0011,يا جماعة، الأوردر ده راح في داهية، ماشي؟,data/audio/0011.wav,phone_calls,2.48,0.25,synthetic
+0012,يا صاحبي، إيه أخبارك؟,data/audio/0012.wav,daily_greetings,1.64,0.0,synthetic
+0013,بص يا معلم، مش عارف أصلح العجلة دي، أعمل إيه؟,data/audio/0013.wav,daily_greetings,3.0,0.0,synthetic
+0014,القميص ده عليه خصم حلو أوي,data/audio/0014.wav,shopping,2.0,0.3333,synthetic
+0015,يا فندم أقدر أساعد حضرتك إزاي؟,data/audio/0015.wav,customer_service,2.2,0.0,synthetic
+0016,يا ولاد ركزوا معايا في الدرس ده,data/audio/0016.wav,teacher_students,1.88,0.2857,synthetic
+0017,يا جماعة الأوردر اتأخر جدا,data/audio/0017.wav,phone_calls,2.32,0.0,synthetic
+0018,صباح الفل يا باشا عامل إيه؟,data/audio/0018.wav,daily_greetings,1.6,0.0,synthetic
+0019,الأوردر اتأخر جدا يا جماعة,data/audio/0019.wav,phone_calls,2.2,0.0,synthetic
+0020,ازيك يا باشا عامل إيه؟,data/audio/0020.wav,daily_greetings,1.44,0.2,synthetic
+real_yfAV4fekQhw_0000,ليوعاني من تروماً وعشان كده عزيزي مهمة قوي إننا نعرف المرض ده لأي ما ده قادر يأثر علينا ويغير تفاصيل كتير في حياتنا أو حياة الناس اللي بنحبها ومهمة برضه نعرف إزاي نقدر نتجاوزه ونفضلش حيشين ضحايا لي طول عمرنا,data/audio/real/real_yfAV4fekQhw_0000.wav,general,12.83,0.25,real
+real_yfAV4fekQhw_0001,بتفقد إحساسها بالأمان كلام ده مش مغلغة آه!,data/audio/real/real_yfAV4fekQhw_0001.wav,general,2.34,0.25,real
+real_yfAV4fekQhw_0002,الإنسان ممكن يكون تعرض لموقف صعب في لحظة الماء بس ينبغي اللازق في اللحظة دي وعيش على حسها مشاعر خوف وقلق حتى وهو نايم في سريره ومدغطي بالحاف وبطنية ممكن حد يشوف كلام ده مش منطقي وصحبه بيبالي وبيدلع عزيزي انت صح بس غلط,data/audio/real/real_yfAV4fekQhw_0002.wav,general,13.92,0.2955,real
+real_yfAV4fekQhw_0003,هتفريز هتثبت مكانك لحد ما الخطر يمشي الخطر مشي خلاص؟ مخك يقولك الحمد لله جد سليمة ويرجع بقى قيادة تاني للنيو كورتكس كل حاجة تركع طبيعية زي ما كانت لكن ايه بقى اللي هيحصل لو الخطر ده ممشيش؟ ايه اللي بيحصل لو الخطر تغلب عليه؟ وأسوأ من خوفك؟,data/audio/real/real_yfAV4fekQhw_0003.wav,general,14.97,0.2083,real
+real_yfAV4fekQhw_0004,خليلي أقول لك إن البوخ الإنساني موزهر بكل مقاييس ومع كل البهدالة اللي الترومة بتبهدل هالو دي بيفضل عنده القدرة على المعافرة والتعافي الموضوع مش سهل وبياخد وقت ولكنه مش مستحيل,data/audio/real/real_yfAV4fekQhw_0004.wav,general,10.26,0.2903,real
+real_yfAV4fekQhw_0005,فأنا موجودة عشانا كوا ما تسألش شوف يا عزيزي الحلات الفاتت شوف الحلات القادمة تنزل تبوص على المصدر واحنا على اليوتيوب تشترك على القناة وعشان يا عزيزي سماعتي هذه الحلقة ما تراش بقى تكتب بستات لما يجيلك الاهتمام بالشخص الغلط أنا بحبك وعزيزك تحبيني أنا مش اهتمام بالشخص الغلط أنا اهتمام بالشخص الصحيح,data/audio/real/real_yfAV4fekQhw_0005.wav,general,12.58,0.4906,real

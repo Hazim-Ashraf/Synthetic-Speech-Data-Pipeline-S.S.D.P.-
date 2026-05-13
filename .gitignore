@@ -20,7 +20,7 @@ logs/
 *.log
 
 # # # ── Data / Audio / Output (large files) ──────────
-#data/audio/
+data/audio/
 data/output/
 data/manifests/
 data/reviewed/

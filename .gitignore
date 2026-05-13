@@ -20,10 +20,10 @@ logs/
 *.log
 
 # # # ── Data / Audio / Output (large files) ──────────
-data/audio/
-# data/output/
-# data/manifests/
-# data/reviewed/
+#data/audio/
+data/output/
+data/manifests/
+data/reviewed/
 
 # ── Secrets ───────────────────────────────────────
 .env

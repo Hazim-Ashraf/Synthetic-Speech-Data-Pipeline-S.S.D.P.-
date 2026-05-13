@@ -98,5 +98,30 @@
     "status": "done",
     "duration": 1.44,
     "audio_path": "data/audio/0020.wav"
+  },
+  "0021": {
+    "status": "done",
+    "duration": 1.76,
+    "audio_path": "data/audio/0021.wav"
+  },
+  "0022": {
+    "status": "done",
+    "duration": 2.72,
+    "audio_path": "data/audio/0022.wav"
+  },
+  "0023": {
+    "status": "done",
+    "duration": 2.12,
+    "audio_path": "data/audio/0023.wav"
+  },
+  "0024": {
+    "status": "done",
+    "duration": 1.6,
+    "audio_path": "data/audio/0024.wav"
+  },
+  "0025": {
+    "status": "done",
+    "duration": 2.8,
+    "audio_path": "data/audio/0025.wav"
   }
 }

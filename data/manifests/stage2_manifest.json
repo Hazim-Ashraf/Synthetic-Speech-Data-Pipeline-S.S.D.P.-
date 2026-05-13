@@ -138,5 +138,40 @@
     "audio_path": "data/audio/0020.wav",
     "duration_sec": 1.44,
     "status": "done"
+  },
+  {
+    "id": "0021",
+    "text": "الموضوع ده مش على ميزانيتي خالص",
+    "audio_path": "data/audio/0021.wav",
+    "duration_sec": 1.76,
+    "status": "done"
+  },
+  {
+    "id": "0022",
+    "text": "عايزك تعرف يا باشا إنك مش هتعرف تخلص الشغل ده",
+    "audio_path": "data/audio/0022.wav",
+    "duration_sec": 2.72,
+    "status": "done"
+  },
+  {
+    "id": "0023",
+    "text": "معلش يا حبيبي أنا مش فاضي أقولك على خططك",
+    "audio_path": "data/audio/0023.wav",
+    "duration_sec": 2.12,
+    "status": "done"
+  },
+  {
+    "id": "0024",
+    "text": "القميص ده عليه خصم جامد أوي",
+    "audio_path": "data/audio/0024.wav",
+    "duration_sec": 1.6,
+    "status": "done"
+  },
+  {
+    "id": "0025",
+    "text": "مش عارف انتي بتعملي ايه بس انا مش عاجبني خالص",
+    "audio_path": "data/audio/0025.wav",
+    "duration_sec": 2.8,
+    "status": "done"
   }
 ]

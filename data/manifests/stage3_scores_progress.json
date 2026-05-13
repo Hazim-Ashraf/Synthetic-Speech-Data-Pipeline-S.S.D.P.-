@@ -139,6 +139,41 @@
     "final_label": null,
     "reviewer_notes": ""
   },
+  "0021": {
+    "wer": 0.0,
+    "asr_hypothesis": "الموضوع ده مش على ميزانيتي خالص",
+    "auto_label": "auto_approved",
+    "final_label": null,
+    "reviewer_notes": ""
+  },
+  "0022": {
+    "wer": 0.0,
+    "asr_hypothesis": "عايزك تعرف يا باشا انك مش هتعرف تخلص الشغل ده",
+    "auto_label": "auto_approved",
+    "final_label": null,
+    "reviewer_notes": ""
+  },
+  "0023": {
+    "wer": 0.1111,
+    "asr_hypothesis": "معلش يا حبيبي انا مش فاضي اقولك على خضتك",
+    "auto_label": "auto_approved",
+    "final_label": null,
+    "reviewer_notes": ""
+  },
+  "0024": {
+    "wer": 0.1667,
+    "asr_hypothesis": "كوميس ده عليه خصم جامد اوي",
+    "auto_label": "needs_review",
+    "final_label": null,
+    "reviewer_notes": ""
+  },
+  "0025": {
+    "wer": 0.1,
+    "asr_hypothesis": "مش عارف انتي بتعمل ايه بس انا مش عاجبني خالص",
+    "auto_label": "auto_approved",
+    "final_label": null,
+    "reviewer_notes": ""
+  },
   "real_yfAV4fekQhw_0000": {
     "wer": 0.25,
     "asr_hypothesis": "بيعاني من تروما وعشان كده عزيزي مهم اوي اننا نعرف المرض ده لاي مدي قادر ياثر علينا ويغير تفاصيل كتير في حياتنا او حياه الناس اللي بنحبها ومهم برضه نعرف ازاي نقدر نتجوزه ومنفضلش عايشين ضحايا ليه طول عمرنا",

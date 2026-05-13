@@ -140,7 +140,7 @@
     "wer": 0.0,
     "asr_hypothesis": "يا صاحبي ايه اخبارك",
     "auto_label": "auto_approved",
-    "final_label": "approved",
+    "final_label": "rejected",
     "reviewer_notes": ""
   },
   {
@@ -240,6 +240,66 @@
     "reviewer_notes": ""
   },
   {
+    "id": "0021",
+    "text": "الموضوع ده مش على ميزانيتي خالص",
+    "audio_path": "data/audio/0021.wav",
+    "duration_sec": 1.76,
+    "source": "synthetic",
+    "wer": 0.0,
+    "asr_hypothesis": "الموضوع ده مش على ميزانيتي خالص",
+    "auto_label": "auto_approved",
+    "final_label": "approved",
+    "reviewer_notes": ""
+  },
+  {
+    "id": "0022",
+    "text": "عايزك تعرف يا باشا إنك مش هتعرف تخلص الشغل ده",
+    "audio_path": "data/audio/0022.wav",
+    "duration_sec": 2.72,
+    "source": "synthetic",
+    "wer": 0.0,
+    "asr_hypothesis": "عايزك تعرف يا باشا انك مش هتعرف تخلص الشغل ده",
+    "auto_label": "auto_approved",
+    "final_label": "approved",
+    "reviewer_notes": ""
+  },
+  {
+    "id": "0023",
+    "text": "معلش يا حبيبي أنا مش فاضي أقولك على خططك",
+    "audio_path": "data/audio/0023.wav",
+    "duration_sec": 2.12,
+    "source": "synthetic",
+    "wer": 0.1111,
+    "asr_hypothesis": "معلش يا حبيبي انا مش فاضي اقولك على خضتك",
+    "auto_label": "auto_approved",
+    "final_label": "approved",
+    "reviewer_notes": ""
+  },
+  {
+    "id": "0024",
+    "text": "القميص ده عليه خصم جامد أوي",
+    "audio_path": "data/audio/0024.wav",
+    "duration_sec": 1.6,
+    "source": "synthetic",
+    "wer": 0.1667,
+    "asr_hypothesis": "كوميس ده عليه خصم جامد اوي",
+    "auto_label": "needs_review",
+    "final_label": "approved",
+    "reviewer_notes": ""
+  },
+  {
+    "id": "0025",
+    "text": "مش عارف انتي بتعملي ايه بس انا مش عاجبني خالص",
+    "audio_path": "data/audio/0025.wav",
+    "duration_sec": 2.8,
+    "source": "synthetic",
+    "wer": 0.1,
+    "asr_hypothesis": "مش عارف انتي بتعمل ايه بس انا مش عاجبني خالص",
+    "auto_label": "auto_approved",
+    "final_label": "approved",
+    "reviewer_notes": ""
+  },
+  {
     "id": "real_yfAV4fekQhw_0000",
     "text": "ليوعاني من تروماً وعشان كده عزيزي مهمة قوي إننا نعرف المرض ده لأي ما ده قادر يأثر علينا ويغير تفاصيل كتير في حياتنا أو حياة الناس اللي بنحبها ومهمة برضه نعرف إزاي نقدر نتجاوزه ونفضلش حيشين ضحايا لي طول عمرنا",
     "audio_path": "data/audio/real/real_yfAV4fekQhw_0000.wav",
@@ -308,7 +368,7 @@
     "wer": 0.4906,
     "asr_hypothesis": "انا موجود عشانك بس شوف يا عزيزي الحلقات اللي فاتت وفي الحلقات اللي جايه نزل على صلاتك احنا على اليوتيوب اشترك على القناه وعشان عزيزي سمعت هذه الحلقه ما تروحش بقى تكتب بوستات لما يجيلك الاهتمام بالشخص الغلط انا بحبك وعايزك تحبني انا مش اهتمام الشخص الغلط انا اهتمام الشخص الصح",
     "auto_label": "auto_rejected",
-    "final_label": "approved",
+    "final_label": null,
     "reviewer_notes": ""
   }
 ]

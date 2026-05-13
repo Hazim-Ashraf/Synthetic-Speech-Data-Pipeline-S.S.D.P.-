@@ -138,5 +138,40 @@
     "domain": "daily_greetings",
     "length_class": "short",
     "word_count": 5
+  },
+  {
+    "id": "0021",
+    "text": "الموضوع ده مش على ميزانيتي خالص",
+    "domain": "general",
+    "length_class": "medium",
+    "word_count": 6
+  },
+  {
+    "id": "0022",
+    "text": "عايزك تعرف يا باشا إنك مش هتعرف تخلص الشغل ده",
+    "domain": "daily_greetings",
+    "length_class": "medium",
+    "word_count": 10
+  },
+  {
+    "id": "0023",
+    "text": "معلش يا حبيبي أنا مش فاضي أقولك على خططك",
+    "domain": "phone_calls",
+    "length_class": "medium",
+    "word_count": 9
+  },
+  {
+    "id": "0024",
+    "text": "القميص ده عليه خصم جامد أوي",
+    "domain": "shopping",
+    "length_class": "medium",
+    "word_count": 6
+  },
+  {
+    "id": "0025",
+    "text": "مش عارف انتي بتعملي ايه بس انا مش عاجبني خالص",
+    "domain": "general",
+    "length_class": "medium",
+    "word_count": 10
   }
 ]
